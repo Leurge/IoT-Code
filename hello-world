@@ -1,0 +1,14 @@
+#!/bin/bash
+echo on or off
+
+read state
+
+if [ "$state" == on ]
+    then
+        curl http://iot.nortcele.win:8080/2caa707a1644485988439acb128de318/update/V4?value=1
+fi
+
+if [ "$state" == off ]
+    then
+        curl http://iot.nortcele.win:8080/2caa707a1644485988439acb128de318/update/V4?value=0
+fi
